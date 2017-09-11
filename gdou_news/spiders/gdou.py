@@ -15,7 +15,7 @@ class GdouSpider(scrapy.Spider):
     start_urls = list(url_list)
 
     def parse(self, response):
-        print("Response: {0}".format(response.xpath('//h1/text()')))
+        # print("Response: {0}".format(response.xpath('//h1/text()')))
         # print("Title: {0}\nTime: {1}\nDesc: {2}\nBody: {3}\nImg Url: {4}".format(title, time, desc, body, img_url))
         url = response.url
         title = [ x.strip() for x in response.xpath('//h1//text()').extract() if x.strip() != "" ]
