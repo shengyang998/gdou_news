@@ -15,7 +15,6 @@ class GdouNewsItem(scrapy.Item):
     title = scrapy.Field()
     body = scrapy.Field()
     imgs_url = scrapy.Field()
-    author_audit = scrapy.Field()
     origin = scrapy.Field()
     time = scrapy.Field()
     keywords = scrapy.Field()

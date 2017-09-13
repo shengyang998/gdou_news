@@ -2,7 +2,7 @@
 import scrapy
 from collections import deque
 import re
-
+import urllib
 
 class GdouSpider(scrapy.Spider):
     name = 'gdou'
@@ -18,6 +18,7 @@ class GdouSpider(scrapy.Spider):
         # print("Response: {0}".format(response.xpath('//h1/text()')))
         # print("Title: {0}\nTime: {1}\nDesc: {2}\nBody: {3}\nImg Url: {4}".format(title, time, desc, body, img_url))
         url = response.url
+        # print(url)
         title = [ x.strip() for x in response.xpath('//h1//text()').extract() if x.strip() != "" ]
         time = [ x.strip() for x in response.xpath('//h2/span/text()').extract() if x.strip() != "" and x.strip() != "0" ]
         author_audit = [ x.strip() for x in response.xpath('//h2//text()').re(r'作者：(.*)来源') if x.strip() != "" ]
