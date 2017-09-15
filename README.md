@@ -10,4 +10,4 @@ pip install scrapy;
 ```
 
 # Known issue
-- Can't crawl pictures with specific format for that format is too ugly. You can check out them in year 2011, contentid around 10000.
+- Can't crawl pictures with specific format for that format is too ugly. You can check out them in year 2011, contentid around 10000, with the result of 'body'=[].
